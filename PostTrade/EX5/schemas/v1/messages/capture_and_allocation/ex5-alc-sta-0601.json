@@ -36,13 +36,8 @@
       "maxItems" : 60
     },
     "allocationStatus" : {
-      "type" : "array",
-      "items" : {
-        "$ref" : "../../objects/business/AllocationStatus.json",
-        "description" : "Status of the allocation"
-      },
-      "minItems" : 1,
-      "maxItems" : 60
+      "$ref" : "../../objects/business/AllocationStatus.json",
+      "description" : "Status of the allocation"
     },
     "averagePriceIndicator" : {
       "$ref" : "../../objects/business/AveragePriceIndicator.json",
@@ -119,7 +114,7 @@
       },
       "tickerSymbol": "VALE3"
     },
-    "allocationStatus": [{
+    "allocationStatus": {
       "allocationStatusCode": 1,
       "statusCode": 1,
       "errorIdentification": [
@@ -130,6 +125,6 @@
           "refId": "REF12345"
         }
       ]
-    }]
+    }
   } ]
 }

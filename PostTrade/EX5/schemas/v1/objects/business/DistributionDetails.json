@@ -43,13 +43,6 @@
         "allOf" : [ {
           "$ref" : "../../objects/business/OtherCollateralDistribution.json"
         }, {
-          "properties" : {
-            "distributionCommandNumber" : true,
-            "collateralIdentification" : true,
-            "collateralType" : false,
-            "assetNumber" : true,
-            "quantity" : true
-          },
           "required" : [ "collateralIdentification", "assetNumber", "quantity" ]
         } ]
       },
@@ -58,24 +51,12 @@
     }
   },
   "anyOf" : [ {
-    "properties" : {
-      "securitiesCollateral" : true
-    },
     "required" : [ "securitiesCollateral" ]
   }, {
-    "properties" : {
-      "cashCollateral" : true
-    },
     "required" : [ "cashCollateral" ]
   }, {
-    "properties" : {
-      "federalBondsCollateral" : true
-    },
     "required" : [ "federalBondsCollateral" ]
   }, {
-    "properties" : {
-      "externalCollateral" : true
-    },
     "required" : [ "externalCollateral" ]
   } ],
   "additionalProperties" : false,

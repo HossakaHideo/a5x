@@ -22,14 +22,6 @@
         "allOf" : [ {
           "$ref" : "../../objects/business/SecuritiesCollateralTransfer.json"
         }, {
-          "properties" : {
-            "collateralIdentification" : true,
-            "assetNumber" : true,
-            "centralDepositaryOperationNumber" : true,
-            "custodianInformationDestination" : true,
-            "quantity" : true,
-            "activeCurrencyAndAmount" : false
-          },
           "required" : [ "collateralIdentification", "assetNumber", "centralDepositaryOperationNumber", "custodianInformationDestination", "quantity" ]
         } ]
       },
@@ -43,12 +35,6 @@
         "allOf" : [ {
           "$ref" : "../../objects/business/CashCollateralTransfer.json"
         }, {
-          "properties" : {
-            "collateralIdentification" : true,
-            "assetNumber" : true,
-            "operationValue" : true,
-            "collateralValue" : false
-          },
           "required" : [ "collateralIdentification", "assetNumber", "operationValue" ]
         } ]
       },
@@ -62,15 +48,6 @@
         "allOf" : [ {
           "$ref" : "../../objects/business/FederalBondsTransfer.json"
         }, {
-          "properties" : {
-            "collateralIdentification" : true,
-            "collateralType" : false,
-            "assetNumber" : true,
-            "assignerAccount" : true,
-            "assigneeAccount" : true,
-            "quantity" : true,
-            "collateralValue" : false
-          },
           "required" : [ "collateralIdentification", "assetNumber", "assignerAccount", "assigneeAccount", "quantity" ]
         } ]
       },
@@ -84,13 +61,6 @@
         "allOf" : [ {
           "$ref" : "../../objects/business/OtherCollateralDistribution.json"
         }, {
-          "properties" : {
-            "distributionCommandNumber" : false,
-            "collateralIdentification" : true,
-            "assetNumber" : true,
-            "collateralType" : false,
-            "quantity" : true
-          },
           "required" : [ "collateralIdentification", "assetNumber", "quantity" ]
         } ]
       },
@@ -100,24 +70,12 @@
   },
   "required" : [ ],
   "anyOf" : [ {
-    "properties" : {
-      "securitiesCollateral" : true
-    },
     "required" : [ "securitiesCollateral" ]
   }, {
-    "properties" : {
-      "cashCollateral" : true
-    },
     "required" : [ "cashCollateral" ]
   }, {
-    "properties" : {
-      "federalBonds" : true
-    },
     "required" : [ "federalBonds" ]
   }, {
-    "properties" : {
-      "externalCollateral" : true
-    },
     "required" : [ "externalCollateral" ]
   } ],
   "additionalProperties" : false,

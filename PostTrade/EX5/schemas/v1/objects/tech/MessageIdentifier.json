@@ -7,9 +7,9 @@
   },
   "title" : "MessageIdentifier",
   "type" : "string",
-  "description" : "Biz. Format: 8 positions for participant code + 8 positions for date (YYYYMMDD) + 30 positions for sequential number + 5 positions for pagination",
-  "examples" : [ "0000004020230815000000000000000000000000000000100001" ],
-  "pattern" : "^[0-9A-Za-z]{8}[0-9]{8}[0-9]{30}[0-9]{5}$",
-  "minLength" : 51,
-  "maxLength" : 51
+  "description" : "A fixed-length, 35-character unique message identifier. The format is composed of a prefix (5I or 5O), participant code (6 digits), date (8 digits), message sequential id (14 digits), and pagination (5 digits). Where unused digits are zero.",
+  "examples" : [ "5I000999202602230000000000000100001", "5O000999202602230000000000000100001" ],
+  "pattern" : "^5[IO]\\d{6}\\d{8}\\d{14}\\d{5}$",
+  "minLength" : 35,
+  "maxLength" : 35
 }

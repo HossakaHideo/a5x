@@ -66,6 +66,6 @@
       "examples" : [ "FIX4.4" ]
     }
   },
-  "required" : [ "ClOrdID", "MessageId", "Timestamp", "From", "To" ],
+  "required" : [ "ClOrdID", "MessageId", "Timestamp", "Sender", "Target" ],
   "description" : "header Description"
 }
